@@ -30,23 +30,6 @@ function CommentSection({ idPublication }) {
             }
         })
         .then(response => response.json())
-        .then(json => {
-            $("#dialog-confirm-text").show();
-            $( "#dialog-confirm" ).dialog({
-                resizable: false,
-                height: "auto",
-                width: 400,
-                modal: true,
-                buttons: {
-                    "Ajouter le commentaire": function() {                  
-                        $( this ).dialog( "close" );
-                    },
-                    Cancel: function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-            });
-        })
         
         .catch(err => {
             console.error('Error submitting comment:', err);
@@ -59,12 +42,6 @@ function CommentSection({ idPublication }) {
             <div className="row">
                 <h3>Commentaires</h3>
                 <textarea rows="5" cols="30" value={commentaire} onChange={handleChange} className="mt-4" />
-            </div>
-            <div id="dialog-confirm" title="Ajouter un commentaire">
-                <p id="dialog-confirm-text" style={{ display: 'none' }}>
-                    <span className="ui-icon ui-icon-alert" style={{ float: 'left', margin: '12px 12px 20px 0' }}></span>
-                    Voulez-vous vraiment ajouter ce commentaire ?
-                </p>
             </div>
             <button type="button" className="envoyer btn btn-primary btn-lg" onClick={handleSubmit}>Envoyer</button>
         </div>

@@ -1,38 +1,4 @@
 
-// function BlogList() {
-//     const [blogs, setBlogs] = React.useState([]);
-
-//     React.useEffect(() => {
-//         async function fetchData() {
-//             try {
-//                 // Fetch all the publications
-//                 const response = await fetch('http://localhost:3000/publication');
-
-//                 if (!response.ok) {
-//                     const message = `Une erreur est survenue : ${response.status}`;
-//                     throw new Error(message);
-//                 }
-
-//                 const data = await response.json();
-//                 setBlogs(data);
-//             } catch (error) {
-//                 console.error(error);
-//             }
-//         }
-//         fetchData();
-//     }, []);
-
-//     return (
-//         <>
-//             {blogs.map((blog) => (
-//                 <BlogCard key={blog.id} idPublication={blog.id} titre={blog.titre} contenu={blog.contenu} />
-//             ))}
-//         </>
-//     );
-// }
-
-
-
 function BlogList() {
     const [currentPage, setCurrentPage] = React.useState(1);
     const cardsPerPage = 5;

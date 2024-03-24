@@ -1,4 +1,5 @@
 {
     "codeium.enableSearch": true,
-    "codeium.aggressiveShutdown": true
+    "codeium.aggressiveShutdown": true,
+    "liveServer.settings.port": 5501
 }

@@ -13,27 +13,41 @@ function BlogDetails({ idPublication }) {
     }, [idPublication]);
 
     return (
+        <div>
         <div className="container">
             <div className="row d-flex justify-content-center">
                 <img src="../photos/cepipic.jpg" id="imageBlog" alt="Blog" />
             </div>
+        </div>
 
-            <br />
-            <p id="title">{details.titre}</p>
-            <br /><br />
+        <br />
 
-            <p className="contenu">{details.contenu}</p>
-
-            <div className="d-flex justify-content-center">
-                <img src="../photos/caption.jpg" height="140" alt="caption" />
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <p id="title">{details.titre}</p>
+                    <p className="contenu">{details.contenu}</p>
+                </div>
             </div>
 
-            <p className="d-flex justify-content-center mb-4" id="auteur">{details.auteur} <br/> {details.datePublication}</p>
+            <div className="row d-flex justify-content-center">
+                <img src="../photos/caption.jpg" id="caption" alt="caption" />
+            </div>
 
-            <p id="contenu2">{details.contenu}</p>
+            <div className="row">
+                <div className="col">
+                    <p className="text-center" id="auteur">{details.auteur}</p>
+                    <p className="text-center mb-4">{details.datePublication}</p>
+                </div>
+            </div>
 
-            <p id="contenu3">{details.contenu}</p>
-
+            <div className="row">
+                <div className="col">
+                    <p id="contenu2" >{details.contenu}</p>
+                    <p id="contenu3" >{details.contenu}</p>
+                </div>
+            </div>
         </div>
+    </div>
     );
 }
