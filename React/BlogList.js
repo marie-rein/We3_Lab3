@@ -68,7 +68,7 @@ function BlogList() {
                 ))}
                 <button id="next" onClick={() => handlePageChange(currentPage + 1)}>Next</button>
             </div>
-            <p id="page-numbers">Page {currentPage} of {totalPages}</p>
+            <p id="page-numbers" className="text-center">Page {currentPage} of {totalPages}</p>
         </div>
     );
 }

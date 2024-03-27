@@ -1,37 +1,16 @@
-function Blog()
-{
-    return (  
-        <>
-        <OtherHtmlCode/>
-        <BlogList/>
-        </>
-    );
-  
+const params = new URLSearchParams(window.location.search);
+let id = params.get('id');
+function App() {
+    return <>
+        <HeaderLoad />
+        <BlogDetails idPublication={id}/>
+        <AddComment idPublication={id}/>
+        <CommentList idPublication={id}/>
+        <FooterLoad />
+    </>
 }
 
-function OtherHtmlCode(){
-    return (
-        <div class="container mb-5">
-    <div class="row">
-        <form class="d-flex flex-column flex-lg-row align-items-center"> 
-            <div class="col-12 col-lg-6 d-flex align-items-center"> 
-                <input class="form-control me-2 border-dark" type="search" placeholder="Rechercher" aria-label="Search"></input>
-                <button class="btn btn-primary mr-2" type="submit">Rechercher</button>
-            </div>
+const container = document.querySelector('#root');
+const root = ReactDOM.createRoot(container);
+root.render(<App />);
 
-            <div class="col-12 col-lg-5 d-flex align-items-center mt-3 mt-lg-0"> 
-                <label class="mx-4">Trier par:</label> 
-                <select class="form-select border-dark">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>   
-            </div>
-        </form>
-    </div>
-</div>
-
-    
-    );
-}

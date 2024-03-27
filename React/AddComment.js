@@ -1,4 +1,4 @@
-function CommentSection({ idPublication }) {
+function AddComment({ idPublication }) {
     const [commentaire, setCommentaire] = React.useState('');
 
     const handleChange = (event) => {

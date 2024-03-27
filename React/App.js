@@ -1,7 +1,8 @@
 function App() {
     return <>
         <HeaderLoad />
-        <Blog/>
+        <OtherHtmlCode />
+        <BlogList/>
         <FooterLoad />
     </>
 }

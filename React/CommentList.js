@@ -1,5 +1,5 @@
 
-function AfficherCommentaires({ idPublication }) {
+function CommentList({ idPublication }) {
 
     const [commentaires, setCommentaires] = React.useState([]);
 
