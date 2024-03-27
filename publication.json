@@ -1069,6 +1069,12 @@
       "contenu": "test commentaire",
       "datePublication": "2024-03-27",
       "idPublication": "96ac"
+    },
+    {
+      "id": "7598",
+      "contenu": "test",
+      "datePublication": "2024-03-27",
+      "idPublication": "8580"
     }
   ]
 }
